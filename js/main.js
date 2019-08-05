@@ -1,6 +1,6 @@
-var countDownDate = new Date("August 8, 2019 10:00:00").getTime(),
+var countDownDate = new Date("August 8, 2019 9:45:00").getTime(),
     countdown = document.getElementById('js-countdown');
-    calendar = document.getElementById('js-calendar');
+    cta = document.getElementById('js-cta');
     title = document.getElementById('js-title');
     deck = document.getElementById('js-deck');
     livestream = document.getElementById('js-livestream');
@@ -19,7 +19,7 @@ var x = setInterval(function() {
     seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
     countdown.innerHTML = '<div class="countdown__item"><span class="countdown__number">' + days + '</span><span class="countdown__label">days</span></div><div class="countdown__item"><span class="countdown__number">' + hours + '</span><span class="countdown__label">hours</span></div><div class="countdown__item"><span class="countdown__number">' + minutes + '</span><span class="countdown__label">minutes</span></div><div class="countdown__item"><span class="countdown__number">' + seconds + '</span><span class="countdown__label">seconds</span></div>';
-    deck.innerHTML = 'We’ve got something big coming your way—be one of the first to hear what it is on August 8 at 10 am PT. Join the live stream to see demos and deep dives on our latest release by CEO Nat Friedman and the team who worked on it.';
+    deck.innerHTML = 'We have an exciting product announcement coming your way—be one of the first to hear what it is on August 8 at 10 am PT. Join the live stream to see demos and deep dives on our latest release by CEO Nat Friedman and the team who worked on it.';
     
     title.classList.add('fade-in');
     deck.classList.add('fade-in');
@@ -31,7 +31,7 @@ var x = setInterval(function() {
         countdown.innerHTML = "";
         deck.innerHTML = 'We’re live from GitHub HQ in San Francisco! See demos and deep dives on our latest ship by CEO Nat Friedman and the team who worked on it.';
         countdown.classList.add('d-none');
-        calendar.classList.add('d-none');
+        cta.classList.add('d-none');
     }
 }, 
 1000);
