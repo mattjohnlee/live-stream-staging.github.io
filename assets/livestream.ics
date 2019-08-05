@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20190808T100000
+DTEND:20190808T103000
+SUMMARY:Live stream: GitHub product announcement
+LOCATION:https://live-stream.github.com/
+DESCRIPTION:We've got an exciting product announcement coming your way—be one of the first to hear what it is. Join the live stream to see demos and deep dives on our latest release by CEO Nat Friedman and the team who worked on it.
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR
