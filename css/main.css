@@ -424,19 +424,3 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 .universe-banner__link:hover, .universe-banner__link:focus {
   text-decoration: underline;
 }
-
-
-
-
-
-/* JS controlled classes, before vs. during the event */
-/* ------------------------------------------------------ */
-
-
-body.js-event-before .deck--during {
-  display: none;
-}
-
-body.js-event-during .countdown, body.js-event-during .cta__item--calendar, body.js-event-during .deck--before {
-  display: none;
-}
