@@ -43,7 +43,7 @@ body:before {
   left: 0;
   background: url('../images/dreamlifter-bg-light.png') center center no-repeat fixed;
   background-size: cover;
-  opacity: .75;
+  opacity: .65;
   z-index: -1;
 }
 
@@ -57,6 +57,10 @@ main {
   max-width: 1200px;
   padding: 3.5%;
   margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
 }
 
 svg {
@@ -106,24 +110,46 @@ svg {
 }
 
 
-.title {
+.heading-1 {
   font-size: 40px;
   font-weight: 500;
   line-height: 1.2;
   margin: 0 0 50px;
-  opacity: 0;
-  transition: all .1s;
 }
 
 @media (min-width: 768px) {
-  .title {
+  .heading-1 {
     font-size: 48px;
   }
 }
 
 @media (min-width: 768px) {
-  .title {
+  .heading-1 {
     font-size: 64px;
+  }
+}
+
+.heading-2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 25px 0;
+}
+
+@media (min-width: 768px) {
+  .heading-2 {
+    font-size: 40px;
+  }
+}
+
+.heading-3 {
+  font-size: 18px;
+  margin: 0 0 20px;
+}
+
+@media (min-width: 768px) {
+  .heading-3 {
+    font-size: 20px;
   }
 }
 
@@ -132,9 +158,6 @@ svg {
   font-size: 16px;
   line-height: 1.6;
   color: #959DA5;
-  min-height: 100px;
-  opacity: 0;
-  transition: all 1s;
 }
 
 @media (min-width: 768px) {
@@ -204,8 +227,6 @@ svg {
   overflow: hidden; 
   max-width: 1200px;
   margin: 50px auto;
-  opacity: 0;
-  transition: all 2s;
 }
 
 .embed-container iframe, .embed-container object, .embed-container embed { 
@@ -258,51 +279,6 @@ svg {
   color: #959DA5;
 }
 
-
-/* User CTAs: Calendar, MailChimp */
-/* ------------------------------------------------------ */
-
-.cta {
-  padding: 3.5%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .cta {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
-}
-
-.cta__item {
-  margin: 25px 0 50px;
-  font-size: 0; /* eliminates extra spacing between inline-block items */
-}
-
-.cta__button-group {
-  display: flex;
-}
-
-.cta-heading {
-  font-size: 18px;
-  margin: 0 0 20px;
-}
-
-@media (min-width: 768px) {
-  .cta-heading {
-    font-size: 20px;
-  }
-}
-
-.cta-description {
-  font-size: 14px;
-  margin: 0 0 20px;
-}
-
-
-
 .button-link {
   display: inline-block;
   flex: 1;
@@ -330,76 +306,59 @@ svg {
   background-color: #2767cf;
 }
 
-/* MailChimp signup */
+
+
+
+/* Recap of live stream */
 /* ------------------------------------------------------ */
 
-.mc-input-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
+.recap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5%;
 }
 
 
-input {
-  -webkit-appearance: none;
-  min-height: 34px;
-  padding: 16px 24px;
-  font-size: 14px;
-  line-height: 20px;
-  vertical-align: middle;
+.recap-item {
+  padding: 3.5% 0;
+}
+
+@media (min-width: 768px) {
+  .recap-item {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: 768px) {
+  .recap__text {
+    flex: 1 0 40%;
+    text-align: left;
+  }
+}
+
+.recap__image {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .recap__image {
+    flex: 1 0 60%;
+    margin-bottom: 0;
+    padding-left: 50px;
+  }
+}
+
+.recap__text p {
+  color: #586069;
+  line-height: 1.6;
+}
+
+.recap__link {
+  margin-top: 20px;
 }
 
 
-input[type="email"] {
-  color: #24292e;
-  background-color: #fff;
-  border: 1px solid #d1d5da;
-  border-radius: 3px;
-  outline: none;
-  box-shadow: inset 0 1px 2px rgba(27,31,35,0.075);
-  margin-right: 10px;
-}
-
-input[type="email"]:hover, input[type="email"]:focus {
-  border-color: #2188ff;
-  outline:none;
-  box-shadow:inset 0 1px 2px rgba(27,31,35,0.075),0 0 0 0.2em rgba(3,102,214,0.3);
-}
-
-input[type="submit"] {
-  font-weight: 500;
-  color: #fff;
-  white-space: nowrap;
-  cursor: pointer;
-  user-select: none;
-  background-color: #1074e7;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #1074e7;
-  border-image: initial;
-  border-radius: 3px;
-  transition: all 0.2s ease 0s;  
-}
-
-input[type="submit"]:hover, input[type="submit"]:focus {
-  background-color: #2767cf;
-}
-
-
-
-/* MailChimp error styles */
-/* ------------------------------------------------------ */
-
-#mc_embed_signup div.mce_inline_error {
-  position: absolute;
-  top: 120%;
-  background: none !important;
-  color: #ff1a7d !important;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !important;
-  font-size: 14px;
-  margin: 0 !important;
-  text-align: left;
-}
 
 
 
@@ -423,20 +382,4 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 
 .universe-banner__link:hover, .universe-banner__link:focus {
   text-decoration: underline;
-}
-
-
-
-
-
-/* JS controlled classes, before vs. during the event */
-/* ------------------------------------------------------ */
-
-
-body.js-event-before .deck--during {
-  display: none;
-}
-
-body.js-event-during .countdown, body.js-event-during .cta__item--calendar, body.js-event-during .deck--before {
-  display: none;
 }
